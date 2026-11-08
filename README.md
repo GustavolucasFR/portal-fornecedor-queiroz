@@ -4,7 +4,7 @@ Portal web full-stack desenvolvido para que os fornecedores do **Grupo Queiroz**
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Stack Tecnológica
 
 - **Banco de Dados Relacional:** SQLite (`better-sqlite3`) com integridade referencial (`FOREIGN KEY`) e consultas em SQL puro relacionando `titulos` e `especies`. *(O arquivo `database.sqlite` já acompanha o projeto populado e pronto para uso, além de possuir comando de migration/seed automatizado).*
 - **Back-end (API REST):** Node.js + TypeScript + Express + Autenticação JWT + Hash criptográfico PBKDF2-SHA256 nativo (`crypto`).
@@ -12,7 +12,7 @@ Portal web full-stack desenvolvido para que os fornecedores do **Grupo Queiroz**
 
 ---
 
-## 🚀 Como instalar e rodar o projeto do zero
+##  Como instalar e rodar o projeto do zero
 
 ### Pré-requisitos
 - **Node.js** 18+ e **npm** instalados.
@@ -44,7 +44,7 @@ Abra o navegador em `http://localhost:3000`:
 
 ---
 
-## 🗄️ Como rodar as migrations que criam e populam o banco
+##  Como rodar as migrations que criam e populam o banco
 
 As migrations e seeds ficam em `backend/src/database/`:
 - `migrations.ts`: Cria as tabelas relacionais `fornecedores`, `especies` e `titulos` (com chaves estrangeiras ligando `titulos.codespecie -> especies.codespecie` e `titulos.seqpessoa -> fornecedores.seqpessoa`).
@@ -58,7 +58,7 @@ npm run migrate
 
 ---
 
-## 🧠 Principais Decisões Técnicas e Regras de Negócio
+##  Principais Decisões Técnicas e Regras de Negócio
 
 1. **Regra de Negócio (`obrigdireito = 'D'` vs `'O'`):**
    - O contexto do problema destaca que cada fornecedor precisa ver **quanto deve ao Queiroz** e o que está vencido ou para vencer.
@@ -81,7 +81,7 @@ npm run migrate
 
 ---
 
-## 🔮 O que eu faria a mais se tivesse mais tempo
+##  O que eu faria a mais se tivesse mais tempo
 
 - **Emissão de 2ª Via de Boleto / QR Code PIX:** Permitir que o fornecedor liquide imediatamente seus títulos vencidos (`D`) gerando um código PIX Copia e Cola ou boleto direto no portal.
 - **Exportação de Relatórios (PDF e Excel/CSV):** Botão para o fornecedor baixar o extrato filtrado para sua contabilidade.
